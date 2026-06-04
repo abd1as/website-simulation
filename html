@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Header</title>
+    <!-- Font Awesome for Cart/User Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Container */
+        .site-header {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Top Bar (Optional announcement) */
+        .top-bar {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        /* Logo */
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111111;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #111111;
+        }
+
+        /* Utility Icons (Search, Account, Cart) */
+        .nav-utilities {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-utilities a {
+            color: #111111;
+            text-decoration: none;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        /* Cart Badge Count */
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: #ff3f6c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        /* Mobile Menu Toggle (Hidden by default) */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Layout for Mobile Screen Sizes */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links on mobile, require JS toggle to show */
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <!-- Optional Top Banner -->
+        <div class="top-bar">
+            FREE SHIPPING ON ALL ORDERS OVER $50
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar">
+            <!-- Mobile Hamburger Menu Icon -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="/">SHOPLOGO</a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+
+            <!-- E-Commerce Specific Action Icons -->
+            <div class="nav-utilities">
+                <a href="/search" aria-label="Search"><i class="fas fa-search"></i></a>
+                <a href="/account" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="/cart" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
